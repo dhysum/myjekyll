@@ -2,14 +2,16 @@
 layout: default
 title: My Pages in GitHub 
 ---
+<html>
+	<body>
+		<h2>{{ page.title }}</h2>
+		<p> Latest Artical </p>
+		<ul>
+			{% for post in site.posts %}
+			<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> </li>
+			{% endfor %}
+		</ul>
+		<img src="http://www.gravatar.com/avatar/9f10c2f8067a7923a36bfbc605f437f6?s=100&r=pg&d=http%3A%2F%2Fn2.nabble.com%2Fimages%2Favatar100.png" alt="Linux logo" /> 
+	</body>
 
-<h2>{{ page.title }}</h2>
-<p> Latest Artical </p>
-<ul>
-	{% for post in site.posts %}
-	<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> </li>
-	{% endfor %}
-</ul>
-<body>
-	<img src="http://www.gravatar.com/avatar/9f10c2f8067a7923a36bfbc605f437f6?s=100&r=pg&d=http%3A%2F%2Fn2.nabble.com%2Fimages%2Favatar100.png" alt="Linux logo"> 
-</body>
+</html>
