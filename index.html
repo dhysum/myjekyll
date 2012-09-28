@@ -2,15 +2,11 @@
 layout: default
 title: My Pages in GitHub 
 ---
-<html>
-	<body>
-		<h2>{{ page.title }}</h2>
-		<p> Latest Artical </p>
-		<ul>
-			{% for post in site.posts %}
-			<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> </li>
-			{% endfor %}
-		</ul>
-	</body>
+<h2>{{ page.title }}</h2>
 
-</html>
+<p> Latest Artical </p>
+<ul>
+	{% for post in site.posts %}
+		<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> </li>
+	{% endfor %}
+</ul>
